@@ -200,7 +200,7 @@
         while (node) {
 
             if (node.nodeType == 1) {
-                handler.start(node.nodeName.toLowerCase(), attrToMap(node.attributes));
+                handler.start(node.nodeName.toLowerCase(), node.attributes);
             } else if (node.nodeType == 3) {
                 handler.chars(node.textContent);
             }
